@@ -1,13 +1,211 @@
-body {
+
+* html {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Space Mono', monospace;
+  background: rgb(55,16,74);
+background: linear-gradient(90deg, rgba(55,16,74,1) 0%, rgba(55,16,74,1) 34%, rgba(82,28,70,1) 100%);
 }
+
+@font-face {
+  font-family: "Meatloaf";
+  src: local("Meatloaf"),
+   url("./assets/fonts/meatloaf/Meatloaf-Sketched.ttf") format("truetype");
+  font-weight: bold;
+  }
+
+  .gradient-bg-welcome {
+    background-color:#0f0e13;
+    background-image: 
+      radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+      radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
+      radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
+  }
+  
+  .gradient-bg-services {
+    background-color:#0f0e13;
+    background-image: 
+      radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+      radial-gradient(at 50% 100%, hsla(225,39%,25%,1) 0, transparent 50%);
+  }
+  
+  .gradient-bg-transactions {
+    background-color: #0f0e13;
+    background-image: 
+      radial-gradient(at 0% 100%, hsla(253,16%,7%,1) 0, transparent 50%), 
+      radial-gradient(at 50% 0%, hsla(225,39%,25%,1) 0, transparent 50%);
+  }
+  
+  .gradient-bg-footer {
+    background-color: #0f0e13;
+    background-image: 
+      radial-gradient(at 0% 100%, hsla(253,16%,7%,1) 0, transparent 53%), 
+      radial-gradient(at 50% 150%, hsla(339,49%,30%,1) 0, transparent 50%);
+  }
+  
+  .blue-glassmorphism {
+    background: rgb(39, 51, 89, 0.4);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+  }
+
+  .purple-glassmorphism {
+    background: rgba(57, 7, 26, 0.4);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+  }
+  
+  /* white glassmorphism */
+  .white-glassmorphism {
+    background: rgba(255, 255, 255, 0.226);
+   
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+   
+  }
+  
+  .eth-card {
+    background-color:#a099ff;
+    background-image: 
+      radial-gradient(at 83% 67%, rgb(152, 231, 156) 0, transparent 58%), 
+      radial-gradient(at 67% 20%, hsla(357,94%,71%,1) 0, transparent 59%), 
+      radial-gradient(at 88% 35%, hsla(222,81%,65%,1) 0, transparent 50%), 
+      radial-gradient(at 31% 91%, hsla(9,61%,61%,1) 0, transparent 52%), 
+      radial-gradient(at 27% 71%, hsla(336,91%,65%,1) 0, transparent 49%), 
+      radial-gradient(at 74% 89%, hsla(30,98%,65%,1) 0, transparent 51%), 
+      radial-gradient(at 53% 75%, hsla(174,94%,68%,1) 0, transparent 45%);
+  }
+  
+  .text-gradient {
+    background-color: #fff;
+    background-image: radial-gradient(at 4% 36%, hsla(0,0%,100%,1) 0, transparent 53%), radial-gradient(at 100% 60%, rgb(0, 0, 0) 0, transparent 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .meatl {
+    font-size: 300px;
+    padding:0;
+   margin-top: -100px;
+   margin-bottom: 0;
+   color: #D3D3D3;
+  }
+
+  @media (max-width: 940px) { 
+    .meatl {
+font-size: 150px;
+    }
+  }
+  
+
+ .tri {
+  width: 0;
+height: 0;
+border-style: solid;
+border-width: 46px 53px 46px 0;
+border-color: transparent #521C46 transparent transparent;
+
+ }
+
+ .tri2 {
+  height: 0;
+  border-style: solid;
+  border-width: 46px 0 46px 53px;
+  border-color: transparent transparent transparent #37104A;
+
+ }
+  
+ .arro {
+ 
+   margin-top: -15px;
+   margin-left: 10px
+ }
+
+ .arro2 {
+   margin-left: -48px;
+   margin-top: -15px;
+ }
+
+ .idcard {
+   margin-top: 470px;
+   margin-right: 230px;
+   width: 300px;
+      height: 150px;
+ }
+ @media (max-width: 1190px) { 
+  .idcard {
+    margin-top: 370px;
+  }
+  }
+
+  @media (max-width: 1050px) { 
+    .idcard {
+      margin-top: 300px;
+      margin-right: 170px;
+      
+    }
+    }
+ @media (max-width: 922px) { 
+  .idcard {
+   visibility: hidden;
+  }
+}
+
+@media (max-width: 767px) { 
+  .idcard {
+    margin-top: 470px;
+    visibility: visible;
+    margin-right: 210px;
+
+  }
+}
+
+@media (max-width: 670px) { 
+  .idcard {
+   margin-top: 340px;
+   width: 250px;
+   height: 150px;
+
+  }
+}
+
+@media (max-width: 500px) { 
+  .idcard {
+   margin-top: 240px;
+   
+  
+
+  }
+}
+@media (max-width: 400px) { 
+  .idcard {
+   margin-top: 180px;
+   margin-left: 120px;
+   height: 130px;
+  
+
+  }
+  .meatl {
+    font-size: 80px;
+    margin-bottom: 0;
+    margin-top: 50px;
+  
+        }
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
