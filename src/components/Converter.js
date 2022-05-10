@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 
 const CurrencyConverter = () => {
-  const currencies = ["ETH", "USD", "NGN", "CAD"];
+  const currencies = ["ETH", "USD", "BTC",  "NGN"];
   const [chosenPrimaryCurrency, setChosenPrimaryCurrency] = useState("USD");
   const [chosenSecondaryCurrency, setChosenSecondaryCurrency] = useState("NGN");
   const [amount, setAmount] = useState(1);
@@ -13,47 +13,25 @@ const CurrencyConverter = () => {
   
   const convert = () => {
 
-    const options = {
-      method: 'GET',
-      url: 'https://currency-converter23.p.rapidapi.com/rate',
-      params: {amount: amount, from: chosenPrimaryCurrency, to: chosenSecondaryCurrency},
-      headers: {
-        'X-RapidAPI-Host': 'currency-converter23.p.rapidapi.com',
-        'X-RapidAPI-Key': 'fcfa679e87msh1506dd469845678p19aa1cjsncce2e30df1ff'
-      }
-    };
-    
-    axios.request(options).then(function (response) {
-      console.log(response.data);
-     
-      setResult(Object.values(response.data.rates[0])[0])
-      // setResult(b[Object.keys(b)[0]])
-     
-    }).catch(function (error) {
-      console.error(error);
-    });
 
-// const options = {
-//   method: 'GET',
-//   url: 'https://currency-converter13.p.rapidapi.com/convert',
-//   params: {from: chosenPrimaryCurrency, to: chosenSecondaryCurrency, amount: amount},
-//   headers: {
-//     'X-RapidAPI-Host': 'currency-converter13.p.rapidapi.com',
-//     'X-RapidAPI-Key': 'fcfa679e87msh1506dd469845678p19aa1cjsncce2e30df1ff'
-//   }
-// };
+const options = {
+  method: 'GET',
+  url: 'https://currency-converter18.p.rapidapi.com/api/v1/convert',
+  params: {from: chosenPrimaryCurrency, to: chosenSecondaryCurrency, amount: amount},
+  headers: {
+    'X-RapidAPI-Host': 'currency-converter18.p.rapidapi.com',
+    'X-RapidAPI-Key': 'fcfa679e87msh1506dd469845678p19aa1cjsncce2e30df1ff'
+  }
+};
 
-// axios.request(options).then(function (response) {
-// 	console.log(response.data);
-//   setResult(response.data.amount)
-// }).catch(function (error) {
-// 	console.error(error);
-// });
-
-  
-
-  
-  };
+axios.request(options).then(function (response) {
+	console.log(response.data);
+  setResult(response.data.result.convertedAmount)
+}).catch(function (error) {
+	console.error(error);
+});
+ 
+  }
 
   return (
     <div className="artwork md:mx-0 mx-auto">
@@ -65,7 +43,7 @@ const CurrencyConverter = () => {
                   <label className="text-white sm:w-16 w-12">From:</label>
                   <input
                     type="text"
-                    className="py-1 rounded sm:w-full w-40"
+                    className="py-1 px-2 rounded sm:w-full w-40"
                     name="currency-amount-1"
                     value={amount}
                     onChange={(e) => setAmount(e.target.value)}
@@ -83,7 +61,7 @@ const CurrencyConverter = () => {
                 </div>
                 <div className="flex justify-center items-center mt-5">
                   <label className="text-white sm:w-16 w-12">To:</label>
-                  <input className="py-1 rounded sm:w-full w-40" value={result} disabled={true} />
+                  <input className="py-1 px-2 rounded sm:w-full w-40" value={result} disabled={true} />
                   <select
                     value={chosenSecondaryCurrency}
                     name="currency-option-2"

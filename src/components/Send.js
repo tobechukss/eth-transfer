@@ -20,6 +20,7 @@ export default function Send() {
     formData,
     sendTransactions,
     handleChange,
+    isLoading
   } = useContext(TransactionContext);
 
   const handleSubmit = (e) => {
@@ -46,7 +47,7 @@ export default function Send() {
             </div>
             <div className="flex md:flex-row flex-col justify-center items-center">
               <div className="flex flex-1 justify-center items-start flex-col md:mr-10">
-                <p className="md:text-left text-center text-white font-light md:w-9/12 w-9/12  text-md mb-4">
+                <p className="md:text-left text-center md:m-0 m-auto text-white font-light md:w-9/12 w-9/12  text-md mb-4">
                   Get started by connecting your accounts then inputting details
                   in the required fields and make some trasactions on the
                   Blockchain.
@@ -55,7 +56,7 @@ export default function Send() {
                 {!currentAccount && (
                   <button
                     onClick={connectWallet}
-                    className="flex flex-row justify-center items-center my-5 bg-[#bc715b] p-3 rounded cursor-pointer hover:bg-[#2546bd]"
+                    className="flex flex-row justify-center md:mx-0 mx-auto items-center my-5 bg-[#bc715b] p-3 rounded cursor-pointer hover:bg-[#2546bd]"
                   >
                     <p className="text-white text-base font-semibold">
                       Connect Wallet
@@ -82,7 +83,7 @@ export default function Send() {
                   handleChange={handleChange}
                 />
                 <Input
-                  placeholder="Keyword (Gif)"
+                  placeholder="Secret code (Optional)"
                   name="keyword"
                   type="text"
                   handleChange={handleChange}
@@ -96,7 +97,7 @@ export default function Send() {
 
                 <div className="h-[1px] w-full bg-gray-400 my-2" />
 
-                {false ? (
+                {isLoading ? (
                   <Loader />
                 ) : (
                   <button

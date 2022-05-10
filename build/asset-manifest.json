@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bb4d9eff.css",
+    "main.js": "/static/js/main.59396e17.js",
+    "static/js/787.c5e0b269.chunk.js": "/static/js/787.c5e0b269.chunk.js",
+    "static/media/Michi2.png": "/static/media/Michi2.e47506129bc6118a6c46.png",
+    "static/media/Meatloaf-Sketched.ttf": "/static/media/Meatloaf-Sketched.630081b927660e904248.ttf",
+    "static/media/lofi.png": "/static/media/lofi.def9c539cf3914cdad17.png",
+    "static/media/arrowup.png": "/static/media/arrowup.1c3795852ea3814c6774.png",
+    "index.html": "/index.html",
+    "main.bb4d9eff.css.map": "/static/css/main.bb4d9eff.css.map",
+    "main.59396e17.js.map": "/static/js/main.59396e17.js.map",
+    "787.c5e0b269.chunk.js.map": "/static/js/787.c5e0b269.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bb4d9eff.css",
+    "static/js/main.59396e17.js"
+  ]
+}
